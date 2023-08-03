@@ -1,0 +1,98 @@
+.balfslider {
+  width: 100%;
+  position: relative;
+}
+
+.balfslider>.slides {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.balfslider.selectors {
+  padding-bottom: 40px;
+}
+
+.balfslider.selectors .slides {
+  bottom: 40px;
+}
+.balfslider .placeholder{
+  opacity: 0;
+  width:auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.balfslider .slides img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.balfslider .slide {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+}
+
+.balfslider .slide:first-child {
+  z-index: 1;
+}
+
+.balfslider ul.selectors {
+  display: block;
+  padding: 0;
+  position: absolute;
+  margin: 0 auto;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.balfslider ul.selectors>li {
+  display: inline-block;
+  list-style: none;
+  background: #eee;
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  border: 1px #aaa solid;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.balfslider ul.selectors>li:before {
+  content: " ";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  border-radius: 50%;
+  background: #f60;
+  opacity: 0;
+}
+
+.balfslider ul.selectors>li.active:before {
+  opacity: 1;
+  -moz-transition: 2s;
+  -webkit-transition: 2s;
+  -ms-transition: 2s;
+  -o-transition: 2s;
+  transition: 2s;
+}
+
+.balfslider ul.selectors>li.fading:before {
+  opacity: 0;
+  -moz-transition: 1s;
+  -webkit-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+}
